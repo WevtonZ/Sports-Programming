@@ -3,7 +3,7 @@
 
 /*
     The idea is that you can maintain two hash tables, one for the original string and the other
-    for it's reverse form, and do point updates in both of them in O(logn) time. It can be done 
+    for it's reverse form, and do point updates in both of them in O(logn) time. This can be done 
     with a BIT or a Segment Tree. This one uses a BIT to do updates and queries.
 */
 
