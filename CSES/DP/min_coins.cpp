@@ -19,7 +19,8 @@ int32_t main(){
             if(i - a[j] >= 0) dp[i] = min(dp[i], dp[i - a[j]] + 1);
         }
     }
-
+    
+    if(dp[c] == 10000000) dp[c] = -1;
     cout << dp[c] << "\n";
 
     return 0;
