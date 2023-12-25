@@ -1,26 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+const int N = 1e6+10;
+
+int dp[N];
+
+int solve(int n){// what number I am now.
+    if(n < 0) return N;
+    if(n == 0) return 0;
+
+    int &ans = dp[n];
+    if(ans != -1) return ans;
+    ans = N;
+
+    string s = to_string(n);
+    for(auto i: s){
+        if(i == '0') continue;
+        ans = min(ans, 1 + solve(n - (i-'0')));
+    }
+    
+    return ans;
+}
+
 int32_t main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+    
     int n;
     cin >> n;
+    fill(dp, dp+n+1, -1);
+    cout << solve(n) << "\n";
 
-    string s;
-    int ans = 1;
-    while(n >= 10){
-        s = to_string(n);
-        int v = 0;
-        for(int i = 0; i < s.size(); i++){
-            v = max(v, s[i]-'0');
-        }
-        n -= v;
-        ans++;
-    }
-
-    cout << ans << "\n";
-    
     return 0;
 }
