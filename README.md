@@ -1,2 +1,2 @@
 # cProg
-Just somewhere to updt some templates, codes that I'll never remember how to use. I don't know what I'm doing anyways so imagine something from this text.
+I need a place to store the problems I find cool but coudn't find it so I'll be using this repository for that. Feel free to use anything that you might find useful.
