@@ -1,5 +1,15 @@
 // https://codeforces.com/contest/2014/problem/H
 
+/*
+    Basicamente, o sherife NUNCA ganha do jeito que o jogo é jogado, mas é possível que ele empate, e a forma que ele tem para empatar é:
+    O sherife vai espelhar a jogada do outro cara toda vez, para assim manter a soma igual, enquanto o outro cara sempre vai pegar o maior valor possível do vetor
+    para maximizar a sua própria soma. Teoricamente você pode afirmar que os dois vão sempre pegar o maior valor possível para somar o máximo possível para ambos os lados.
+    Então a ideia é contar quantos caras tem na range (l,r) e olhar a paridade deles, pois, olhando a paridade, podemos achar se é possível ambos terem a soma igual. Se
+    algum dos números da range aparece uma quantidade ímpar de vezes, então não é possível o sherife empatar.
+
+    Pra contar isso, usa MO e não pensa. Só é preciso pensar em como chegar na conclusão anterior.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
