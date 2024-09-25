@@ -1,5 +1,12 @@
 // https://atcoder.jp/contests/abc054/tasks/abc054_d
 
+/*
+    Basicamente isso é uma DP do tipo dp[i][sa][sb]: Na posição i, eu tenho sa do primeiro líquido e sb do segundo líquido. Como o valor dos líquidos são bem pequenos,
+    é possível de armazená-los em uma tabela e assim fazer uma DP em cima disso.
+    Bom, como o N desse problema é muito pequeno, dá pra você usar a técnica de Meet in the Middle e dividir o vetor em dois, depois calcular todos os subconjuntos de GCD possíveis
+    desses vetores e depois combiná-los de alguma forma. Não me recordo de que forma você tem que juntá-los, mas é possível.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
  
