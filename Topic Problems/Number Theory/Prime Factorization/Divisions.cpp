@@ -1,5 +1,10 @@
 // https://codeforces.com/gym/100753/attachments
 
+/*
+  Usar o algoritmo de Pollard Rho para conseguir fatorar o número rapidamente. Após isso, usar a fórmula de contar divisores de um número usando os primos.
+  Basicamente um exercício pra usar uma template de Pollard Rho. Mas sem a template. TODO: Criar uma template em algum momento da minha vida.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
  
