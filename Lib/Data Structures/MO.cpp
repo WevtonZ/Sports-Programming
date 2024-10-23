@@ -49,7 +49,7 @@ struct MO{
         rs.resize(queries.size());
 
         int i = 0, j = -1; // j is always less than i by one in the beginning.
-        for(auto [l, r, idx]: queries){ // ALWAYS do j before i, unless u wanna have some runtime errors.
+        for(auto [l, r, idx]: queries){ // ALWAYS do j before i, unless u really like getting runtime errors.
             while(j < r){
                 j++;
                 add(a[j]);
