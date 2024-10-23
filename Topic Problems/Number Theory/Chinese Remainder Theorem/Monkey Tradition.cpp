@@ -1,8 +1,7 @@
 // https://lightoj.com/problem/monkey-tradition
 
 /*
-  Esse problema eh uma aplicação direta do Teorema Chines do Resto para várias equações. Como tudo eh primo, podemos fazer e sempre haverá uma resposta válida.
-  
+  Esse problema eh uma aplicação direta do Teorema Chines do Resto para várias equações. Como tudo eh primo, podemos resolver as equações e sempre haverá uma resposta válida.
 */
 
 #include <bits/stdc++.h>
