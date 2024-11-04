@@ -4,7 +4,7 @@
 */
 
 struct query{
-    static const int K = 350; // can be changed
+    static const int K = 350;
     int l, r, idx;
 
     query(int _l, int _r, int _idx) { // thing so you can emplace_back
@@ -13,7 +13,7 @@ struct query{
         this->idx = _idx;
     }
 
-    bool operator <(const query &o){ // super comparator that makes things go flyin
+    bool operator <(const query &o){
         if(l/K == o.l/K){
             if((l/K)&1){
                 return r > o.r;
@@ -25,6 +25,9 @@ struct query{
 };
 
 struct MO{
+    /*
+        In here we can change everything. Add more things if you think it is necessary for solving your problem, be it more variables, vectors and such.
+    */
     vector<query> queries;
     vector<int> rs;
 
