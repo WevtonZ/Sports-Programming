@@ -92,5 +92,5 @@ struct SCC {
     }
 
     // função de solve para resolver algo usando a scc.
-    int solve() {}
+    void solve() {}
 };
