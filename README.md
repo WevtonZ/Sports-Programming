@@ -1,2 +1,2 @@
 # cProg
-Place to put problems that I find cool and some implementations of algorithms and data structures as well.
+A place where I put problems that I find cool and some implementations of algorithms and data structures as well.
