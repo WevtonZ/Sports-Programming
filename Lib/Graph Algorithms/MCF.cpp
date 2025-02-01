@@ -1,6 +1,7 @@
 /*
-  Algorithm to take the Maximum flow of a graph, and for the maximums, take the one with minimum cost.
-  Idk whose algorithm this is, but I took and modified it to take any flow, and not only the maximum.
+  Algoritmo que eu peguei de alguém e modifiquei pra pegar qualquer fluxo se passar o K.
+  O negócio é que esse algoritmo pega o fluxo com custo, e minimizamos o custo para passar qualquer fluxo
+  de tamanho K de passarmos pra ele, se ele achar um desses.
 */
 
 template <class T = int>
