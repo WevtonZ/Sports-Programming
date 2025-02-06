@@ -21,22 +21,22 @@ struct SCC {
     // já inicializar todos os caras.
     SCC(int n) {
         this->n = n;
-        edges.resize(n);
-        rEdges.resize(n);
-        roots.resize(n);
-        in.resize(n);
-        out.resize(n);
+        edges.resize(n+10);
+        rEdges.resize(n+10);
+        roots.resize(n+10);
+        in.resize(n+10);
+        out.resize(n+10);
     }
 
     // ou se não quiser pode usar init. Fica a gosto do freguês.
-    void init(int n) {
-        this->n = n;
-        edges.resize(n);
-        rEdges.resize(n);
-        roots.resize(n);
-        in.resize(n);
-        out.resize(n);
-    }
+    // void init(int n) {
+    //     this->n = n;
+    //     edges.resize(n);
+    //     rEdges.resize(n);
+    //     roots.resize(n);
+    //     in.resize(n);
+    //     out.resize(n);
+    // }
 
     // dfs para andar nas arestas e arestas reversas do grafo, coletando o que é necessário.
     void dfs(int u, vector<int> &vet, vector<vector<int>> &graph) {
