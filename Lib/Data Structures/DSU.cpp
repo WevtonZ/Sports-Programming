@@ -1,6 +1,8 @@
 /*
     Simple algorithm for Disjoint Set Union Data Structure. Uses Union by Size instead of rank because they are
     almost the same complexity. Uses path compression heuristic.
+    
+    1 indexed.
 */
 
 struct Edge {
@@ -18,23 +20,24 @@ struct Edge {
 };
 
 struct DSU {
-    vector<int> pai, sz;
-    int n;
+    vector<int> pai, sz; // pai e quantidade que ele guarda.
+    int n; // quantidade de vértices no meu DSU.
 
-    DSU(int n) {
-        this->n = n;
-        pai.resize(n);
-        sz.assign(n, 1);
-        for(int i=0; i<n; i++){
+    DSU(int n) : n(n) {
+        pai.resize(n+10);
+        sz.assign(n+10, 1);
+        for(int i=0; i<=n; i++){
             pai[i]=i;
         }
     }
 
+    // procura o representante desse cara. Usa compressão de caminhos.
     int find(int x) {
         if(x == pai[x]) return x;
         return pai[x] = find(pai[x]);
     }
 
+    // une os conjuntos entre dois caras. Usa união por tamanho.
     bool unite(int a, int b) {
         a = find(a);
         b = find(b);
