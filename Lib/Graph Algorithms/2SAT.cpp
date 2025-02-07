@@ -1,18 +1,21 @@
-// Implementation of 2SAT struct.
+/*
+    0 indexed.
 
+    Struct to solve problems related to 2SAT. It is quite the same everywhere you go but if it is needed to change
+    then you can change it. I don't know what though.
+*/
 struct SAT{
-    int nodes;
-    vector<vector<int>> adj, r_adj;
-    vector<bool> vis;
-    vector<int> comp, order;
-    vector<bool> ans;
+    int nodes; // number of nodes in the graph.
+    vector<vector<int>> adj, r_adj; // adjacency and reverse adjacency list for storing vertices.
+    vector<bool> vis; // to mark if I visited some node.
+    vector<int> comp, order; // components and the order which I will traverse the graph.
+    vector<bool> ans; // generates any valid answer.
 
-    SAT(int n){
-        this->nodes = 2*n+1;
-        adj.resize(nodes);
-        r_adj.resize(nodes);
-        comp.assign(nodes, 0);
-        ans.assign(n,false);
+    SAT(int n) : nodes(n){
+        adj.resize(nodes+10);
+        r_adj.resize(nodes+10);
+        comp.assign(nodes+10, 0);
+        ans.assign(nodes+10,false);
     }
 
     void dfs1(int u){
@@ -31,6 +34,7 @@ struct SAT{
         }
     }
 
+    // add implication u -> v
     void add_imp(int u, int v){
         adj[u].push_back(v);
         r_adj[v].push_back(u);
@@ -64,6 +68,7 @@ struct SAT{
         }
     }
 
+    // go for the solve!
     bool solve(){
         vis.assign(nodes,false);
         for(int i = 0; i < nodes; i++){
