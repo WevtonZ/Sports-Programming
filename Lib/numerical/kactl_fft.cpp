@@ -1,7 +1,10 @@
 /*
   Template de FFT do KACTL sem as macros. Misericórdia de macro.
-  Não vou explicar aqui o que o código faz porque eu não lembro direito, eu só sei que ele faz uma convolução
-  nos dois vetores passados, seja ele com mod ou sem.
+  Não vou explicar aqui o que o código faz porque é meio complexo, e também não precisa saber o que ele faz, mas
+  precisa saber o que ele te retorna quando usado.
+
+  Você passa dois vetores pra ele, e ele te retorna um outro vetor que é a convolução dos vetores passados.
+  Convolução no nosso caso é apenas uma multiplicação dos polinômios. Algoritmo roda em O((n+m)log(n+m)).
 
   Código original: https://github.com/kth-competitive-programming/kactl/blob/main/content/numerical/FastFourierTransform.h
 */
