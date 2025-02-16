@@ -1,6 +1,7 @@
 /*
-    MO data structure to solve problems that revolves around MO algorithm. Pretty easy to use, u can just copypaste and use it as a blackbox, only changing the
-    add, remove and calc function. Sometimes u may need to change vector<int> rs to some other type, but u can manage it.
+    MO data structure to solve problems that revolves around MO algorithm. Pretty easy to use, u can just copypaste
+    and use it as a blackbox, only changing the add, remove and calc function.
+    Sometimes u may need to change vector<int> rs to some other type, but u can manage it.
 */
 
 struct query{
@@ -23,7 +24,8 @@ struct query{
 
 struct MO{
     /*
-        In here we can change everything. Add more things if you think it is necessary for solving your problem, be it more variables, vectors and such.
+        Here we can change everything. Add more things if you think it is necessary for solving your problem,
+        be it more variables, vectors and such.
     */
     vector<query> & queries; // vetor para guardar as queries.
     vector<int> rs; // vetor que guarda as respostas.
