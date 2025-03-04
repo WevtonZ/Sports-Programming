@@ -174,6 +174,7 @@ template<class T = int> struct Treap {
         return;
     }
 
+    // faz alguma query na range [l, r]. Usar
     ll query(int l, int r) {
         pnode t1, t2, t3;
         split(root, t1, t2, l);
