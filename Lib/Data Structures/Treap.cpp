@@ -9,7 +9,6 @@
     2. reverse é roubado.
     3. Operações na Treap são O(log N) com alta probabilidade.
 
-    Codigo parecido com o do CP Algorithms, mas com algumas coisas a mais e outras a menos.
 */
 template<class T = int> struct Treap {
     struct Node {
@@ -55,8 +54,8 @@ template<class T = int> struct Treap {
         if(t != nullptr && t->rev == true){
             t->rev = false;
             swap(t->l, t->r);
-            t->l->rev ^= true;
-            t->r->rev ^= true;
+            if(t->l != nullptr) t->l->rev ^= true;
+            if(t->r != nullptr) t->r->rev ^= true;
             updt_cnt(t); // caso seja necessario dar update na contagem de nos. Se nao, comentar.
         }
     }
@@ -120,14 +119,18 @@ template<class T = int> struct Treap {
     }
 
     // inverte um subarray [l, r].
-    void reverse(int l, int r) {
+    void reverse(pnode t, int l, int r) {
         if(l >= r) return;
         pnode t1, t2, t3;
-        split(root, t1, t2, l);
+        split(t, t1, t2, l);
         split(t2, t2, t3, r-l+1);
         t2->rev ^= true;
-        merge(root, t1, t2);
-        merge(root, root, t3);
+        merge(t, t1, t2);
+        merge(t, t, t3);
+    }
+
+    void reverse(int l, int r) {
+        reverse(root, l, r);
     }
 
     // mover um bloco [l,r] para a posicao indicada.
@@ -143,6 +146,7 @@ template<class T = int> struct Treap {
     // imprime a arvore.
     void print(pnode t) {
         if(t == nullptr) return;
+        push(t);
         print(t->l);
         cout << t->value;
         print(t->r);
