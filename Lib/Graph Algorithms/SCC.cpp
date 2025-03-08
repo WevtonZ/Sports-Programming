@@ -19,8 +19,7 @@ struct SCC {
     SCC () {}
 
     // já inicializar todos os caras.
-    SCC(int n) {
-        this->n = n;
+    SCC(int n) : n(n) {
         edges.resize(n+10);
         rEdges.resize(n+10);
         roots.resize(n+10);
