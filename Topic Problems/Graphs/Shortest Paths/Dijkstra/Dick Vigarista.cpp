@@ -57,6 +57,8 @@ void test(){
         dp[v,0] = min(dp[v,0], dp[u,0]+w), onde u é o vértice atual, v é um vizinho de u que ainda não foi visitado e w é o peso da aresta entre eles.
         dp[v,1] = min(dp[v,1], dp[u,0]+w/2);
         dp[v,1] = min(dp[v,1], dp[u,1]+w).
+
+        Após rodarmos o algoritmo, temos, para cada estado de dp[i,j], os caminhos mínimos a partir de algum ponto x qualquer selecionado. Assim, podemos resolver o problema. 
     */
   
     int n, m;
