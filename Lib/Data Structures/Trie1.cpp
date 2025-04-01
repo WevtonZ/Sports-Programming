@@ -1,9 +1,9 @@
 /*
-  Struct da árvore Trie.
+  Struct da árvore TRIE.
 
   Alguns pontos sobre a estrutura:
     1. Foi feita de forma recursiva.
-    2. Usa mapa, então é um pouco mais lento do que criar globalmente.
+    2. Complexidade de fazer operações na estrutura é O(|S|log(S)), onde |S| é o tamanho da string de entrada das funções.
 
   TODO:
     * Fazer a TRIE iterativa;
