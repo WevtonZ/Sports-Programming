@@ -1,7 +1,7 @@
-const int N = 1e6+10, K = 26;
+const int N = 1e6+2, K = 18;
 
 struct Node {
-    int child[K];
+    int child[26];
     bool leaf;
 
     Node() {
