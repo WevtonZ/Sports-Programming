@@ -1,5 +1,9 @@
 // N é o tamanho da maior string na trie. K é a profundidade da árvore.
 // como isso nao funciona muito bem pra mim, eu só boto um tamanho aleatório.
+
+// TODO: Fazer as outras funções da trie de String.
+// TODO: Fazer a trie de bits e fazer todas as suas funções.
+
 const int N = 1e6+2, K = 18;
 
 struct Node {
