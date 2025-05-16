@@ -1,3 +1,14 @@
+/*
+    A ideia de usar Li Chao Tree em vez de LineContainer é que LineContainer não consegue lidar com segmentos de reta, apenas com retas infinitas.
+    Assim, podemos resolver problemas que envolvem achar um ponto em uma reta ótima usando Li Chao Tree. Podemos usar essa estrutura em vez do LineContainer,
+    ela é mais poderosa, mas é bastante overkill.
+
+    Sobre complexidade:
+
+    1. query de busca é O(log n);
+    2. adicionar retas custa O(n log^2 n), pois primeiro precisamos achar a range para adicionar a reta e depois adicioná-la de fato, e ambas custam O(log n).
+*/
+
 
 // Struct para manter uma reta. Pode ser usado para manter um segmento de reta também.
 struct Line {
@@ -59,7 +70,8 @@ void add_seg(int x, int tl, int tr, int l, int r, Line line) {
         add_seg(rig(x),tm+1,tr,l,r,line);
     }
 }
- 
+
+// faz a query em um ponto pos qualquer. Se não houver, retorne algo infinito, que já está settado.
 ll get(int x, int tl, int tr, int pos) {
     if(tl == tr) return f(tree[x], pos);
     else{
