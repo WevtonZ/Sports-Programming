@@ -11,6 +11,9 @@
     TODO: Fazer a Li Chao Tree dinâmica, para poder usar float ou números gigantes e não apenas se limitar a inteiros.
 */
 
+using ll = long long;
+#define lef(x) (x << 1)
+#define rig(x) (lef(x) | 1)
 
 // Struct para manter uma reta. Pode ser usado para manter um segmento de reta também.
 struct Line {
