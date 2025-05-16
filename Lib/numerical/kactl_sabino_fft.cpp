@@ -1,5 +1,5 @@
 /*
-  Template de FFT do Felipe Sabino, pega do KACTL, sem a NTT pq eu n sei o que é isso.
+  Template de FFT do Felipe Sabino, onde foi pega do KACTL, sem a NTT pq eu n sei o que é isso.
   Não vou explicar aqui o que o código faz porque é meio complexo, e também não precisa saber o que ele faz, mas
   precisa saber o que ele te retorna quando usado.
 
