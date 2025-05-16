@@ -1,9 +1,9 @@
 /*
-    declaration goes like: MCMF<T, T2> placeholder(size);
-    My motivation was that sometimes having flow and cost to be of the same type could be a problem. For example in a matching
-    problem where the cost part is a double and flow is int.
+    Motivação: Um algoritmo que calcula separado o Fluxo e o Custo de cada aresta. Deixar ambos juntos permite um monte de bizarrice acontecer
 
-    To use this algorithm, just declare the class and add edges and call for the mcmf function.
+    Não tenho ideia da complexidade, mas parece ser muito ruim. O algoritmo se parece com o Dinic, mas parece ser bem mais lento.
+
+    Algoritmo para calcular o fluxo máximo e, de todas as formas de se alcançar esse fluxo, calcular o que tem o menor custo possível.
 */
 
 // [T -> Fluxo, T2 -> Custo]
