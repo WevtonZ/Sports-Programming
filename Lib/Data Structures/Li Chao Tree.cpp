@@ -7,6 +7,8 @@
 
     1. query de busca é O(log n);
     2. adicionar retas custa O(n log^2 n), pois primeiro precisamos achar a range para adicionar a reta e depois adicioná-la de fato, e ambas custam O(log n).
+
+    TODO: Fazer a Li Chao Tree dinâmica, para poder usar float ou números gigantes e não apenas se limitar a inteiros.
 */
 
 
