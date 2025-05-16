@@ -3,10 +3,9 @@
 
     coisas importantes a se notar:
 
-    1. o In-Order de uma árvore binaria de busca sempre dá as coisas ordenadas pelo valor. Estamos ordenando a prioridade
-    do nó, então ela nos dá os nós em ordem de prioridade. Isso faz com que a forma da nossa árvore seja unicamente
-    determinada.
-    2. reverse é roubado.
+    1. o In-Order de uma Árvore Binaria de Busca sempre me retorna os vértices ordenados pelo valor. Nossa ordenação prioriza a prioridade
+    do nó. Isso faz com que o formato da nossa árvore seja unicamente determinado.
+    2. A operação de reverse é roubadíssima.
     3. Operações na Treap são O(log N) com alta probabilidade.
 
 */
