@@ -11,11 +11,11 @@ struct SAT{
     vector<int> comp, order; // components and the order which I will traverse the graph.
     vector<bool> ans; // generates any valid answer.
 
-    SAT(int n) : nodes(n){
-        adj.resize(nodes+10);
-        r_adj.resize(nodes+10);
-        comp.assign(nodes+10, 0);
-        ans.assign(nodes+10,false);
+    SAT(int n) : nodes(2*n+10){
+        adj.resize(nodes);
+        r_adj.resize(nodes);
+        comp.assign(nodes, 0);
+        ans.assign(nodes,false);
     }
 
     void dfs1(int u){
