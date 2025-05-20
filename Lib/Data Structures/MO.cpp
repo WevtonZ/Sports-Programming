@@ -1,7 +1,9 @@
 /*
-    MO data structure to solve problems that revolves around MO algorithm. Pretty easy to use, u can just copypaste
-    and use it as a blackbox, only changing the add, remove and calc function.
-    Sometimes u may need to change vector<int> rs to some other type, but u can manage it.
+    MO data structure to solve problems that revolves around dividing things into buckets of size sqrt of N.
+    The idea is to implement the add, remove and calc functions that will be used on the working problem.
+
+    Now u can solve queries in O(sqrt(n)), and the total runtime of the algorithm is O(Q * sqrt(n)*K), where K is some other complexity
+    that may be computed in the MO struct.
 */
 
 struct query{
