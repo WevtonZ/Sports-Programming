@@ -1,9 +1,11 @@
 /*
     0 indexed.
 
-    Struct to solve problems related to 2SAT.
-    The idea of 2SAT is to transform a CNF to a directed graph, and then solve the assignment problem on graphs.
-    Algorithm runs in O(n+m).
+    Struct para resolver problemas relacionados ao problema de 2SAT. 
+
+    A ideia principal é transformar uma forma normal conjuntiva em um grafo direcionado, assim resolvendo o problema de atribuir variáveis
+    na CNF no problema de atribuir variáveis em um grafo. Usa-se Componentes Fortemente Conexas para resolver o 2SAT, então o runtime total
+    do algoritmo é O(n+m), onde n é a quantidade de vértices do grafo e m é a quantidade de arestas.
 */
 struct SAT{
     int nodes; // number of nodes in the graph.
