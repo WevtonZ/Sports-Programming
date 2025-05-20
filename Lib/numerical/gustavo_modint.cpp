@@ -1,5 +1,9 @@
 const int MOD = 1e9+7;
 
+/*
+    modint feito por Gustavo Leal, aka, el Coacho.
+*/
+
 struct mi {
     int v;
     explicit operator int() const { return v; }
