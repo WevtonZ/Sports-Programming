@@ -1,8 +1,9 @@
 /*
     0 indexed.
 
-    Struct to solve problems related to 2SAT. It is quite the same everywhere you go but if it is needed to change
-    then you can change it. I don't know what though.
+    Struct to solve problems related to 2SAT.
+    The idea of 2SAT is to transform a CNF to a directed graph, and then solve the assignment problem on graphs.
+    Algorithm runs in O(n+m).
 */
 struct SAT{
     int nodes; // number of nodes in the graph.
