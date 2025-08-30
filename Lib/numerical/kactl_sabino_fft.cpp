@@ -72,7 +72,6 @@ struct FFT{
 
     /*
     	Multiplica dois polinômios modulo M, sendo M um inteiro qualquer.
-     	Tem maior precisão do que usar double pra multiplicar polinômios, vai a gosto do freguês.
     */
     template<int M> vl convMod(const vl &a, const vl &b) {
         if (a.empty() || b.empty()) return {};
