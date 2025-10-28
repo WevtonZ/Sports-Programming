@@ -10,7 +10,7 @@
 const int N = 1e6+10;
 const int A = 26;
 
-int go[N][A]; // automato do kmp
+int go[N][A]; // all tomato do kmp
 
 void kmp(string s) {
     // essa parte cuida de fazer o KMP ou Prefix Function. O(|s|)
