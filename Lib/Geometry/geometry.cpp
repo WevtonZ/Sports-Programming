@@ -3,7 +3,7 @@
   TODO: 
 * Colocar coisas dentro da namespace.
 * Fazer função para intesecção de círculos.
-* Fazer mais testes para testar se isso está funcionando.
+* Fazer mais testes para testar se isso está funcionando corretamente.
 */
 
 using ld = long double;
@@ -11,8 +11,11 @@ using ll = long long;
 
 const ld EPS = 1e-8;
 
-// testar o sinal de um numero. Funciona até mesmo quando o tipo é inteiro.
 template<typename T> int sgn(T x) { return (x > EPS) - (x < -EPS); }
+const ld pi = acosl(-1.0l);
+
+ld rad(ld x) { return x*pi/180; }
+ld deg(ld x) { return x*180/pi; }
 
 template<class T> struct Point {
     T x,y;
@@ -34,8 +37,8 @@ template<class T> struct Point {
 };
 
 template<class T> struct Circle {
-    Point<T> c;
-    T r;
+    Point<T> c; // centro
+    T r; // raio
 
     Circle(Point<T> x, T raio) : c(x), r(raio) {}
 
