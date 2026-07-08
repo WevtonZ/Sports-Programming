@@ -29,12 +29,19 @@ template<class T> struct Point {
     Point operator+(const Point & o) const { return Point(x+o.x, y+o.y); }
     Point operator-(const Point & o) const { return Point(x-o.x, y-o.y); }
 
+    T operator*(const Point & o) const { return x * o.x + y * o.y; }// escalar
+    T operator^(const Point & o) const { return x * o.y - y * o.x; }// vetorial
+
     bool operator==(const Point &o) const { return sgn(x-o.x) == 0 && sgn(y-o.y) == 0; }
-    bool operator<(const Point & o) {
-        if(sgn(x-o.x) != 0) return sng(x-o.x) < 0;
+    bool operator<(const Point & o) const {
+        if(sgn(x-o.x) != 0) return sgn(x-o.x) < 0;
         return sgn(y-o.y) < 0;
     }
 };
+
+template<typename T> T cross(const Point<T> &a, const Point<T> &b, const Point<T> &c) {
+    return (b-a)^(c-a);
+}
 
 template<class T> struct Circle {
     Point<T> c; // centro
