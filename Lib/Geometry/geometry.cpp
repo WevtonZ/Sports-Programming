@@ -29,8 +29,8 @@ template<class T> struct Point {
     Point operator+(const Point & o) const { return Point(x+o.x, y+o.y); }
     Point operator-(const Point & o) const { return Point(x-o.x, y-o.y); }
 
-    T operator*(const Point & o) const { return x * o.x + y * o.y; }// escalar
-    T operator^(const Point & o) const { return x * o.y - y * o.x; }// vetorial
+    T operator*(const Point & o) const { return x * o.x + y * o.y; }
+    T operator^(const Point & o) const { return x * o.y - y * o.x; }
 
     bool operator==(const Point &o) const { return sgn(x-o.x) == 0 && sgn(y-o.y) == 0; }
     bool operator<(const Point & o) const {
@@ -39,7 +39,8 @@ template<class T> struct Point {
     }
 };
 
-template<typename T> T cross(const Point<T> &a, const Point<T> &b, const Point<T> &c) {
+// (x > 0: antihorario | x < 0: horário | x == 0: colineares)
+template<typename T> T cross(Point<T> &a, Point<T> &b, Point<T> &c) {
     return (b-a)^(c-a);
 }
 
