@@ -8,9 +8,12 @@ using namespace std;
 #define dbg(x) cout << #x << " = " << x << endl
 #define el '\n'
 
+// ordenar antes de usar essa funcao
+#define make_unique(x) x.erase(unique(x.begin(), x.end()), x.end())
+
 using ll = long long;
 using ld = long double;
- 
+
 template<class T> using min_priority_queue = priority_queue<T, vector<T>, greater<T>>;
 template<class T> using vc = vector<T>;
 template<class T> using vvc = vc<vc<T>>;
@@ -20,12 +23,12 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 void test() {
     
 }
- 
+
 int32_t main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    // cout<<fixed<<setprecision(6);
- 
+    // cout<<fixed<<setprecision(10);
+
     int tt=1;
     // cin >> tt;
     for(int _=1; _<=tt; _++) {
