@@ -1,8 +1,8 @@
 /*
   Indexada de 0
-  Realiza soma e produto entre matrizes quadradas. Não pretendo expandir para matrizes genéricas
+  Realiza o produto entre matrizes quadradas e o produto de uma matriz quadrada por um vetor
 */
-
+ 
 template<class T> struct Matrix {
     vector<vector<T>> mat;
     int n;
@@ -16,21 +16,25 @@ template<class T> struct Matrix {
         }
     }
     Matrix(vector<vector<T>> & M) : mat(M), n(M.size()) {}
-
+ 
     vector<T> & operator[](int i) { return mat[i]; }
     const vector<T>& operator[](int i) const { return mat[i]; }
-
-    Matrix operator+(const Matrix & o) const {
-        Matrix res(n);
-        for(int i=0; i<n; i++) for(int j=0; j<n; j++) res[i][j]=mat[i][j]+o[i][j];
-        return res;
-    }
-
+ 
     Matrix operator*(const Matrix & o) const {
         Matrix res(n);
         for(int i=0; i<n; i++) for(int k=0; k<n; k++){
             for(int j=0; j<n; j++){
                 res[i][j]+=mat[i][k]*o[k][j];
+            }
+        }
+        return res;
+    }
+ 
+    vector<T> operator*(const vector<T> & o) const {
+        vector<T> res(n);
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                res[j]+=mat[i][j]*o[i];
             }
         }
         return res;
